@@ -31,7 +31,7 @@ function displayProducts(productList) {
 
             <div class="product-image">
 
-                <img src="${product.image}" alt="${product.name}">
+                <img src="../${product.image}" alt="${product.name}">
 
             </div>
 

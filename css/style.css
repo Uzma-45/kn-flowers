@@ -93,7 +93,7 @@ a {
             rgba(255,255,255,.96),
             rgba(255,255,255,.35)
         ),
-        url("/images/flowers/hero.jpg");
+        url("../images/flowers/hero.jpg");
 
     background-size: cover;
     background-position: center;
