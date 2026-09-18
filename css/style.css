@@ -1363,7 +1363,7 @@ footer a:hover {
             rgba(255, 249, 245, 0.60),
             rgba(255, 249, 245, 0.60)
         ),
-        url("/images/flowers/hero.jpg");
+        url("../images/flowers/hero.jpg");
 
     background-size: cover;
     background-position: center;
