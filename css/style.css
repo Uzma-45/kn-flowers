@@ -1,0 +1,2317 @@
+:root {
+    --primary: #6B3E52;
+    --secondary: #C98F9C;
+    --background: #FFF9F5;
+    --soft: #F8EDEF;
+    --sage: #879B7A;
+    --gold: #C8A96B;
+    --text: #3D3437;
+    --text-light: #756B6E;
+    --white: #FFFFFF;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    background: #fff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    height: 75px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border-bottom: 1px solid #eee;
+}
+
+.logo,
+.footer-logo {
+    font-family: "DM Serif Display", serif;
+    font-size: 28px;
+}
+
+.logo span,
+.footer-logo span {
+    color: #9b3558;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar nav a {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.navbar nav a:hover,
+.navbar nav .active {
+    color: #9b3558;
+}
+
+.cart-link {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#cart-count {
+    background: #9b3558;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 7px;
+    font-size: 11px;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.96),
+            rgba(255,255,255,.35)
+        ),
+        url("/images/flowers/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.small-heading,
+.section-heading > p {
+    color: #9b3558;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-family: "DM Serif Display", serif;
+    font-size: 62px;
+    line-height: 1.1;
+    margin: 15px 0 20px;
+}
+
+.hero h1 span {
+    color: #9b3558;
+    display: block;
+}
+
+.hero-content > p:not(.small-heading) {
+    max-width: 520px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.primary-btn {
+    background: #9b3558;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #7d2947;
+}
+
+.secondary-btn {
+    border: 1px solid #9b3558;
+    color: #9b3558;
+}
+
+.secondary-btn:hover {
+    background: #9b3558;
+    color: white;
+}
+
+
+/* SECTIONS */
+
+.section {
+    padding: 80px 8%;
+}
+
+.light-section {
+    background: #faf7f7;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: 40px;
+    font-weight: 400;
+    margin: 8px 0;
+}
+
+.section-heading > p:last-child {
+    color: #777;
+}
+
+
+/* CATEGORY */
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.category-card {
+    text-align: center;
+    padding: 35px 20px;
+    border: 1px solid #eee;
+    background: white;
+    transition: .3s;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.category-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.category-card h3 {
+    margin-bottom: 8px;
+}
+
+.category-card p {
+    font-size: 13px;
+    color: #777;
+}
+
+
+/* PRODUCTS */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background: white;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    height: 260px;
+    background: #f2e7ea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 75px;
+}
+
+.product-info {
+    padding: 18px;
+}
+
+.product-info h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.product-info p {
+    color: #9b3558;
+    font-weight: 600;
+}
+
+.add-cart {
+    border: none;
+    background: #9b3558;
+    color: white;
+    padding: 9px 15px;
+    margin-top: 12px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.center-button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+/* SERVICES */
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+    border: 1px solid #eee;
+}
+
+.service-image {
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    background: #f7e9ed;
+}
+
+.service-content {
+    padding: 25px;
+}
+
+.service-content h3 {
+    margin-bottom: 10px;
+}
+
+.service-content p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.service-content a {
+    color: #9b3558;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* WHY US */
+
+.why-us {
+    padding: 80px 8%;
+    background: #fdf8f9;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.feature > div {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    margin-bottom: 8px;
+}
+
+.feature p {
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* CTA */
+
+.cta {
+    padding: 80px 8%;
+    text-align: center;
+    background: #9b3558;
+    color: white;
+}
+
+.cta p:first-child {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.cta h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: 42px;
+    margin: 10px 0;
+}
+
+.cta p {
+    margin-bottom: 25px;
+}
+
+.white-btn {
+    background: white;
+    color: #9b3558;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #24171c;
+    color: white;
+    padding: 55px 8% 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+}
+
+.footer-logo {
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    color: #bbb;
+    font-size: 13px;
+}
+
+.footer-content h3 {
+    margin-bottom: 15px;
+}
+
+.footer-content a {
+    display: block;
+    color: #bbb;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.copyright {
+    border-top: 1px solid #49383e;
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .category-grid,
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .hero {
+        min-height: 550px;
+        padding: 40px 6%;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        text-align: center;
+    }
+
+    .section,
+    .why-us {
+        padding: 60px 6%;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .category-grid,
+    .product-grid,
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image {
+        height: 240px;
+    }
+
+    .cta h2 {
+        font-size: 34px;
+    }
+}
+/* PAGE HEADER */
+
+.page-header {
+    text-align: center;
+    padding: 75px 8%;
+    background: #faf1f3;
+}
+
+.page-header p:first-child {
+    color: #9b3558;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.page-header h1 {
+    font-family: "DM Serif Display", serif;
+    font-size: 48px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.page-header p:last-child {
+    color: #777;
+}
+
+
+/* SHOP TOP */
+
+.shop-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.shop-top h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.shop-top p {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* SEARCH */
+
+.search-box input {
+    width: 250px;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-family: inherit;
+}
+
+.search-box input:focus {
+    border-color: #9b3558;
+}
+
+
+/* FILTER */
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 9px 18px;
+    background: white;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #9b3558;
+    color: white;
+    border-color: #9b3558;
+}
+
+
+/* NO PRODUCTS */
+
+.no-products {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 50px;
+    color: #777;
+}
+
+
+/* MOBILE SHOP */
+
+@media (max-width: 600px) {
+
+    .page-header {
+        padding: 55px 6%;
+    }
+
+    .page-header h1 {
+        font-size: 38px;
+    }
+
+    .shop-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .search-box,
+    .search-box input {
+        width: 100%;
+    }
+
+}
+/* SERVICES PAGE */
+
+.service-page-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.service-number {
+    color: #9b3558;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.service-list {
+    list-style: none;
+    margin: 15px 0 20px;
+}
+
+.service-list li {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 6px;
+}
+
+.service-list li::before {
+    content: "✓";
+    color: #9b3558;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+
+/* SERVICE IMAGE BACKGROUNDS */
+
+.service-floral-jewellery {
+    background: #f7e5ea;
+}
+
+.service-car {
+    background: #f2e8df;
+}
+
+.service-bridal {
+    background: #f8e8ee;
+}
+
+.service-groom {
+    background: #eee9e5;
+}
+
+.service-decoration {
+    background: #f4e9e4;
+}
+
+.service-custom {
+    background: #f5e8ed;
+}
+
+
+/* HOW IT WORKS */
+
+.how-it-works {
+    padding: 80px 8%;
+    background: #faf7f7;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.step-number {
+    width: 45px;
+    height: 45px;
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #9b3558;
+    color: white;
+
+    font-weight: 600;
+}
+
+.step h3 {
+    margin-bottom: 8px;
+}
+
+.step p {
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* SERVICE PAGE MOBILE */
+
+@media (max-width: 900px) {
+
+    .service-page-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .service-page-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* ========================================
+   SERVICE DETAILS PAGE
+======================================== */
+
+.service-details {
+    padding: 80px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.service-details-image {
+    height: 500px;
+    background: #f7e5ea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+#service-icon {
+    font-size: 150px;
+}
+
+.service-details-content {
+    max-width: 600px;
+}
+
+.service-label {
+    color: #9b3558;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.service-details-content h1 {
+    font-family: "DM Serif Display", serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.service-details-content > p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.service-details-content h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+#service-list {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+#service-list li {
+    color: #555;
+    margin-bottom: 8px;
+}
+
+#service-list li::before {
+    content: "✓";
+    color: #9b3558;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.service-price {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.service-price span {
+    color: #777;
+}
+
+.service-price strong {
+    color: #9b3558;
+    font-size: 18px;
+}
+
+.service-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.service-actions .btn {
+    display: inline-block;
+}
+
+
+/* ========================================
+   SERVICE BENEFITS
+======================================== */
+
+.service-benefits {
+    background: #faf7f7;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.benefit-card {
+    background: white;
+    padding: 35px 25px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.benefit-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+    margin-bottom: 10px;
+}
+
+.benefit-card p {
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* ========================================
+   SERVICE DETAILS RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .service-details {
+        grid-template-columns: 1fr;
+        padding: 50px 6%;
+        gap: 35px;
+    }
+
+    .service-details-image {
+        height: 350px;
+    }
+
+    #service-icon {
+        font-size: 100px;
+    }
+
+    .service-details-content h1 {
+        font-size: 38px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-actions {
+        flex-direction: column;
+    }
+
+    .service-actions .btn {
+        text-align: center;
+    }
+
+}
+/* ========================================
+   KN FLOWERS - NEW COLOR THEME
+======================================== */
+
+body {
+    background: var(--background);
+    color: var(--text);
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    background: var(--white);
+}
+
+.logo {
+    color: var(--text);
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.navbar nav a {
+    color: var(--text);
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: var(--primary);
+}
+
+.cart-link {
+    color: var(--text);
+}
+
+#cart-count {
+    background: var(--primary);
+    color: var(--white);
+}
+
+
+/* HERO */
+
+.hero {
+    background-color: var(--soft);
+}
+
+.hero h1 {
+    color: var(--text);
+}
+
+.hero p {
+    color: var(--text-light);
+}
+
+
+/* BUTTONS */
+
+.btn {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.btn:hover {
+    background: var(--secondary);
+}
+
+.secondary-btn {
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.secondary-btn:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.white-btn {
+    background: var(--white);
+    color: var(--primary);
+}
+
+.white-btn:hover {
+    background: var(--soft);
+}
+
+
+/* SECTION HEADINGS */
+
+.section-heading p {
+    color: var(--primary);
+}
+
+.section-heading h2 {
+    color: var(--text);
+}
+
+.section-heading > p:last-child {
+    color: var(--text-light);
+}
+
+
+/* CATEGORY CARDS */
+
+.category-card {
+    background: var(--white);
+}
+
+.category-card:hover {
+    box-shadow: 0 10px 30px rgba(107, 62, 82, 0.12);
+}
+
+
+/* PRODUCT CARDS */
+
+.product-card {
+    background: var(--white);
+}
+
+.product-card:hover {
+    box-shadow: 0 10px 30px rgba(107, 62, 82, 0.12);
+}
+
+.product-info h3 {
+    color: var(--text);
+}
+
+.product-info p {
+    color: var(--primary);
+}
+
+
+/* ADD TO CART */
+
+.add-cart {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.add-cart:hover {
+    background: var(--secondary);
+}
+
+
+/* SERVICES */
+
+.service-card {
+    background: var(--white);
+}
+
+.service-content h3 {
+    color: var(--text);
+}
+
+.service-content p {
+    color: var(--text-light);
+}
+
+.service-content a {
+    color: var(--primary);
+}
+
+.service-content a:hover {
+    color: var(--secondary);
+}
+
+
+/* SERVICE PAGE BACKGROUNDS */
+
+.service-floral-jewellery {
+    background: #F8EDEF;
+}
+
+.service-car {
+    background: #F4EEE7;
+}
+
+.service-bridal {
+    background: #F7E8ED;
+}
+
+.service-groom {
+    background: #EEF0EA;
+}
+
+.service-decoration {
+    background: #F5ECE5;
+}
+
+.service-custom {
+    background: #F3E9EE;
+}
+
+
+/* PAGE HEADER */
+
+.page-header {
+    background: transparent;
+    text-align: left;
+    padding: 60px 8%;
+}
+
+.page-header p:first-child {
+    color: var(--primary);
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.page-header h1 {
+    color: #8E5AA7;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.page-header p:last-child {
+    color: var(--text-light);
+    font-size: 17px;
+    line-height: 1.6;
+    max-width: 600px;
+}
+/* HOW IT WORKS */
+
+.how-it-works {
+    background: var(--background);
+}
+
+.step-number {
+    background: var(--primary);
+    color: var(--white);
+}
+
+
+/* CTA */
+
+.cta {
+    background: var(--primary);
+}
+
+.cta p,
+.cta h2 {
+    color: var(--white);
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #3D3437;
+}
+
+.footer-logo {
+    color: var(--white);
+}
+
+.footer-logo span {
+    color: var(--secondary);
+}
+
+footer h3 {
+    color: var(--white);
+}
+
+footer p,
+footer a {
+    color: #D9CFD3;
+}
+
+footer a:hover {
+    color: var(--secondary);
+}
+
+.copyright {
+    border-top: 1px solid #5A4D52;
+}
+
+
+/* SERVICE DETAILS */
+
+.service-details-image {
+    background: var(--soft);
+}
+
+.service-label {
+    color: var(--primary);
+}
+
+.service-details-content h1 {
+    color: var(--text);
+}
+
+.service-details-content > p {
+    color: var(--text-light);
+}
+
+#service-list li {
+    color: var(--text-light);
+}
+
+#service-list li::before {
+    color: var(--primary);
+}
+
+.service-price strong {
+    color: var(--primary);
+}
+
+.benefit-card {
+    background: var(--white);
+}
+
+.benefit-card h3 {
+    color: var(--text);
+}
+
+.benefit-card p {
+    color: var(--text-light);
+}
+
+.service-benefits {
+    background: var(--soft);
+}
+/* ================= NAVBAR ICON ANIMATIONS ================= */
+
+/* Navbar links */
+.navbar a {
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Small movement when hovering */
+.navbar a:hover {
+    transform: translateY(-2px);
+}
+
+/* Animated underline */
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: var(--secondary);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 70%;
+}
+
+
+/* ================= ICON ANIMATION ================= */
+
+/* All navbar icons */
+.navbar i {
+    transition: transform 0.3s ease;
+}
+
+/* Icon moves slightly upward */
+.navbar a:hover i {
+    transform: translateY(-3px) scale(1.1);
+}
+
+
+/* ================= CART ICON ================= */
+
+.cart-icon:hover i {
+    animation: cartBounce 0.5s ease;
+}
+
+@keyframes cartBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-5px);
+    }
+
+    70% {
+        transform: translateY(2px);
+    }
+}
+
+
+/* ================= WISHLIST ICON ================= */
+
+.wishlist-icon:hover i {
+    animation: heartPop 0.5s ease;
+}
+
+@keyframes heartPop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* ================= SEARCH ICON ================= */
+
+.search-icon:hover i {
+    transform: scale(1.2) rotate(8deg);
+}
+
+
+/* ================= MOBILE MENU ICON ================= */
+
+.menu-icon:hover i {
+    transform: rotate(90deg);
+}
+/* ================= FLOWERS PAGE BACKGROUND ================= */
+
+/* ================= FLOWERS PAGE BACKGROUND ================= */
+
+.page-header {
+    background:
+        linear-gradient(
+            rgba(255, 249, 245, 0.60),
+            rgba(255, 249, 245, 0.60)
+        ),
+        url("/images/flowers/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+/* PAGE HEADER TEXT */
+
+.page-header {
+    text-align: left;
+    padding: 60px 8%;
+}
+
+.page-header p:first-child {
+    color: rgb(28, 28, 28);
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.page-header h1 {
+    color: #9b3558;
+    font-family: "DM Serif Display", serif;
+    font-size: 48px;
+    font-weight: 400;
+    margin: 10px 0 15px;
+}
+
+.page-header p:last-child {
+    color: var(--text-light);
+    font-size: 17px;
+    line-height: 1.6;
+    max-width: 600px;
+}
+/* ========================================
+   SERVICES - PREMIUM HOVER ANIMATION
+======================================== */
+
+.service-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #eee;
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease,
+        border-color 0.45s ease;
+}
+
+/* Card moves upward */
+.service-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 45px rgba(107, 62, 82, 0.20);
+    border-color: var(--secondary);
+}
+
+
+/* ========================================
+   SERVICE IMAGE ANIMATION
+======================================== */
+
+.service-image {
+    overflow: hidden;
+    transition: background 0.45s ease;
+}
+
+.service-card:hover .service-image {
+    background: #F8EDEF;
+}
+
+
+/* Icon zoom + rotate */
+.service-card:hover .service-image > * {
+    transform: scale(1.18) rotate(4deg);
+    transition: transform 0.5s ease;
+}
+
+
+/* ========================================
+   SERVICE CONTENT
+======================================== */
+
+.service-content {
+    transition: transform 0.4s ease;
+}
+
+.service-card:hover .service-content {
+    transform: translateY(-3px);
+}
+
+
+/* Service title */
+.service-content h3 {
+    transition: color 0.3s ease;
+}
+
+.service-card:hover .service-content h3 {
+    color: var(--primary);
+}
+
+
+/* Learn More */
+.service-content a {
+    display: inline-block;
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+.service-card:hover .service-content a {
+    color: var(--primary);
+    transform: translateX(7px);
+}
+
+
+/* ========================================
+   SHINE EFFECT
+======================================== */
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.45),
+        transparent
+    );
+    transform: skewX(-20deg);
+    transition: left 0.7s ease;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.service-card:hover::before {
+    left: 130%;
+}
+/* ========================================
+   ABOUT PAGE
+======================================== */
+
+.about-intro {
+    padding: 80px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-image {
+    height: 450px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+.about-content {
+    max-width: 600px;
+}
+
+.about-label {
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.about-content h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--text);
+}
+
+.about-content p:not(.about-label) {
+    color: var(--text-light);
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+
+/* WHAT WE OFFER */
+
+.about-offer {
+    padding: 80px 8%;
+    background: var(--soft);
+}
+
+.about-features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.about-feature {
+    background: var(--white);
+    padding: 35px 25px;
+    text-align: center;
+    transition: 0.4s ease;
+}
+
+.about-feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(107, 62, 82, 0.15);
+}
+
+.about-feature i {
+    font-size: 35px;
+    color: var(--primary);
+    margin-bottom: 18px;
+    transition: 0.4s ease;
+}
+
+.about-feature:hover i {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.about-feature h3 {
+    margin-bottom: 10px;
+    color: var(--text);
+}
+
+.about-feature p {
+    color: var(--text-light);
+    font-size: 13px;
+}
+
+
+/* ABOUT MOBILE */
+
+@media (max-width: 900px) {
+
+    .about-intro {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .about-intro {
+        padding: 60px 6%;
+    }
+
+    .about-content h2 {
+        font-size: 34px;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* ========================================
+   CONTACT PAGE
+======================================== */
+
+.contact-section {
+    padding: 80px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: start;
+}
+
+
+/* CONTACT INFORMATION */
+
+.contact-info {
+    max-width: 550px;
+}
+
+.contact-label {
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.contact-info h2,
+.contact-form h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--text);
+    margin-bottom: 20px;
+}
+
+.contact-description {
+    color: var(--text-light);
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+
+/* CONTACT ITEMS */
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--soft);
+    color: var(--primary);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+
+    transition: 0.4s ease;
+}
+
+.contact-item:hover .contact-icon {
+    background: var(--primary);
+    color: var(--white);
+    transform: scale(1.1) rotate(5deg);
+}
+
+.contact-item h3 {
+    font-size: 15px;
+    margin-bottom: 2px;
+    color: var(--text);
+}
+
+.contact-item p {
+    color: var(--text-light);
+    font-size: 13px;
+}
+
+
+/* ========================================
+   CONTACT FORM
+======================================== */
+
+.contact-form {
+    background: var(--soft);
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.contact-form h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 15px;
+
+    border: 1px solid #ddd;
+    background: var(--white);
+
+    font-family: inherit;
+    font-size: 13px;
+
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(107, 62, 82, 0.08);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.contact-form .btn {
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form .btn i {
+    margin-left: 8px;
+    transition: 0.3s ease;
+}
+
+.contact-form .btn:hover i {
+    transform: translateX(5px);
+}
+
+
+/* ========================================
+   CONTACT MOBILE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .contact-section {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .contact-section {
+        padding: 60px 6%;
+    }
+
+    .contact-info h2,
+    .contact-form h2 {
+        font-size: 34px;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+
+}
+/* ========================================
+   ACTIVE NAVBAR PAGE
+======================================== */
+
+/* ========================================
+   ACTIVE NAVBAR PAGE
+======================================== */
+
+.navbar nav a {
+    padding: 8px 14px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+.navbar nav a:hover {
+    color: #6B3E52;
+    background: #F8EDEF;
+}
+
+/* Active page */
+.navbar nav a.active {
+    color: #FFFFFF;
+    background: #6B3E52;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(107, 62, 82, 0.20);
+}
+
+/* Small hover effect */
+.navbar nav a.active:hover {
+    background: #6B3E52;
+    color: #FFFFFF;
+    transform: translateY(-1px);
+}
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-image img {
+    transform: scale(1.08);
+}
+.product-image {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background: #F8EDEF;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.08);
+}
+.category-icon {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.category-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.category-card:hover .category-icon img {
+    transform: scale(1.08);
+}
+/* ========================================
+   SERVICE DETAILS IMAGE FIX
+======================================== */
+
+/* ========================================
+   SERVICE DETAILS IMAGE
+======================================== */
+
+.service-details-image {
+    width: 100%;
+    height: 520px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #FFF9F5;
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 40px rgba(107, 62, 82, 0.12);
+}
+
+.service-details-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 24px;
+
+    transition: transform 0.5s ease;
+}
+
+.service-details-image:hover img {
+    transform: scale(1.03);
+}
+/* ========================================
+   SERVICE DETAILS PAGE
+======================================== */
+
+.service-details {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 40px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* ========================================
+   MAIN SERVICE IMAGE
+======================================== */
+
+.service-details-image {
+    width: 100%;
+    height: 520px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #FFF9F5;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 40px rgba(107, 62, 82, 0.12);
+}
+
+.service-details-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 24px;
+
+    transition: transform 0.5s ease;
+}
+
+.service-details-image:hover img {
+    transform: scale(1.03);
+}
+
+
+/* ========================================
+   SERVICE CONTENT
+======================================== */
+
+.service-details-content {
+    max-width: 600px;
+}
+
+.service-label {
+    color: #6B3E52;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.service-details-content h1 {
+    color: #6B3E52;
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: 48px;
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.service-details-content > p {
+    color: #756B6E;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+.service-details-content h3 {
+    color: #3D3437;
+
+    font-size: 20px;
+
+    margin-bottom: 15px;
+}
+
+
+/* ========================================
+   SERVICE LIST
+======================================== */
+
+#service-list {
+    list-style: none;
+
+    margin: 0 0 25px;
+    padding: 0;
+}
+
+#service-list li {
+    color: #756B6E;
+
+    font-size: 15px;
+
+    margin-bottom: 10px;
+}
+
+#service-list li::before {
+    content: "✓";
+
+    color: #6B3E52;
+
+    font-weight: 600;
+
+    margin-right: 10px;
+}
+
+
+/* ========================================
+   SERVICE PRICE
+======================================== */
+
+.service-price {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.service-price span {
+    color: #756B6E;
+}
+
+.service-price strong {
+    color: #6B3E52;
+
+    font-size: 18px;
+}
+
+
+/* ========================================
+   SERVICE BUTTONS
+======================================== */
+
+.service-actions {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.service-actions .btn {
+    display: inline-block;
+}
+
+
+/* ========================================
+   WHY KN FLOWERS
+======================================== */
+
+.service-benefits {
+    background: #F8EDEF;
+}
+
+
+/* Heading */
+
+.service-benefits .section-heading {
+    max-width: 700px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-benefits .section-heading p:first-child {
+    color: #6B3E52;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+.service-benefits .section-heading h2 {
+    color: #6B3E52;
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: 42px;
+
+    font-weight: 400;
+
+    margin: 10px 0 15px;
+}
+
+.service-benefits .section-heading p:last-child {
+    color: #756B6E;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   BENEFIT CARDS
+======================================== */
+
+.benefits-grid {
+    max-width: 1100px;
+
+    margin: 40px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.benefit-card {
+    background: #FFFFFF;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(107, 62, 82, 0.08);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 18px 40px rgba(107, 62, 82, 0.15);
+}
+
+
+/* ========================================
+   BENEFIT IMAGES
+======================================== */
+
+.benefit-icon {
+    width: 100%;
+
+    height: 220px;
+
+    overflow: hidden;
+
+    margin: 0;
+}
+
+.benefit-icon img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.benefit-card:hover .benefit-icon img {
+    transform: scale(1.06);
+}
+
+
+/* ========================================
+   BENEFIT CONTENT
+======================================== */
+
+.benefit-card h3 {
+    color: #6B3E52;
+
+    font-size: 21px;
+
+    margin: 22px 20px 10px;
+}
+
+.benefit-card p {
+    color: #756B6E;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin: 0 25px 25px;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .service-details {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        padding: 50px 6%;
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .service-details {
+        padding: 40px 6%;
+    }
+
+    .service-details-image {
+        height: 400px;
+    }
+
+    .service-details-content h1 {
+        font-size: 38px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit-icon {
+        height: 220px;
+    }
+
+    .service-actions {
+        flex-direction: column;
+    }
+
+    .service-actions .btn {
+        text-align: center;
+    }
+
+}

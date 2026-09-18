@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flowers & Bouquets | KN Flowers</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>KN</span> Flowers
+        </div>
+
+
+        <nav>
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="flowers.html" class="active">
+                Flowers
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <a href="cart.html" class="cart-link">
+
+            🛒 Cart
+
+            <span id="cart-count">
+                0
+            </span>
+
+        </a>
+
+    </header>
+
+
+
+    <!-- PAGE HEADER -->
+
+    <section class="page-header">
+
+        <p>KN FLOWERS COLLECTION</p>
+
+        <h1>
+            Flowers & Bouquets
+        </h1>
+
+        <p>
+            Beautiful flowers and thoughtfully designed bouquets
+            for every special occasion.
+        </p>
+
+    </section>
+
+
+
+    <!-- PRODUCTS -->
+
+    <section class="section">
+
+        <div class="shop-top">
+
+            <div>
+
+                <h2>
+                    Our Flowers
+                </h2>
+
+                <p>
+                    Choose something beautiful for someone special.
+                </p>
+
+            </div>
+
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Search flowers..."
+                >
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CATEGORY FILTER -->
+
+        <div class="filter-buttons">
+
+            <button
+                class="filter-btn active"
+                onclick="filterProducts('all')">
+
+                All
+
+            </button>
+
+
+            <button
+                class="filter-btn"
+                onclick="filterProducts('bouquet')">
+
+                Bouquets
+
+            </button>
+
+
+            <button
+                class="filter-btn"
+                onclick="filterProducts('rose')">
+
+                Roses
+
+            </button>
+
+
+            <button
+                class="filter-btn"
+                onclick="filterProducts('basket')">
+
+                Flower Baskets
+
+            </button>
+
+
+            <button
+                class="filter-btn"
+                onclick="filterProducts('gift')">
+
+                Chocolate
+
+            </button>
+
+        </div>
+
+
+
+        <!-- PRODUCT GRID -->
+
+        <div
+            id="all-products"
+            class="product-grid">
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <div>
+
+            <p>
+                LOOKING FOR SOMETHING SPECIAL?
+            </p>
+
+            <h2>
+                Need a Custom Bouquet?
+            </h2>
+
+            <p>
+                Tell us what you have in mind and
+                we'll help create something beautiful.
+            </p>
+
+            <a
+                href="contact.html"
+                class="btn white-btn">
+
+                Contact Us
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-content">
+
+
+            <div>
+
+                <div class="footer-logo">
+
+                    <span>KN</span> Flowers
+
+                </div>
+
+                <p>
+                    Beautiful flowers for beautiful moments.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="flowers.html">
+                    Flowers
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    📍 Mandya, Karnataka
+                </p>
+
+                <p>
+                    📞 +91 XXXXX XXXXX
+                </p>
+
+                <p>
+                    📱 WhatsApp Available
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                © 2026 KN Flowers. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="../js/products.js"></script>
+
+    <script src="../js/cart.js"></script>
+
+    <script src="../js/flowers.js"></script>
+
+
+</body>
+
+</html>
